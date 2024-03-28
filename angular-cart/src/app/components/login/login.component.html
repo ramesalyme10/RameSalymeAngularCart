@@ -1,0 +1,75 @@
+<section class="login">
+  <div class="container">
+    <div class="login-text">
+      <h1>Sign Up</h1>
+    </div>
+    <div class="login-content">
+      <div class="grid-2">
+        <div class="login-box">
+          <img src="/assets/images.png" alt="images" />
+        </div>
+        <div class="login-box">
+         
+          <form
+            [formGroup]="loginData"
+            class="login-form"
+            (ngSubmit)="onLogin()"
+          >
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                formControlName="email"
+                name="email"
+                id="email"
+                placeholder="Enter New Email"
+              />
+            </div>
+             <div class="alert_danger" *ngIf="submitted && (f['email'].errors)" >
+               <div *ngIf="f['email'].errors['required']">
+                  Email is required
+               </div>
+               <div *ngIf="f['email'].errors['email']">
+                  Email is invalid
+               </div>
+             </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                formControlName="password"
+                minlength="6"
+                maxlength="40"
+                placeholder="Enter New Password"
+              />
+               
+              <div class="alert_danger" *ngIf="submitted && (f['password'].errors)" >
+                <div *ngIf="f['password'].errors['required']">
+                   password is required
+                </div>
+                <div *ngIf="f['password'].errors['minlength']">
+                   password must be at least 6 characters
+                </div>
+                <div *ngIf="f['password'].errors['maxlength']">
+                   password must be at least 40 characters
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="form-group">
+              <p>
+                don't have an account <a [routerLink]="['/register']">Signin</a>
+              </p>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Sign Up" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

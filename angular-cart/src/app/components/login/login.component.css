@@ -1,0 +1,86 @@
+.login {
+  margin: 5rem 0 5rem 0;
+}
+
+.login .login-text {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 5rem;
+}
+
+.login .login-text h1::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  bottom: 10px;
+  background: #53af08;
+  width: 150px;
+  height: 2px;
+}
+
+.login .login-text h1 {
+  font-size: 40px;
+  color: #453f3f;
+}
+
+.login .login-content .grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.login .login-form{
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    padding: 2rem ;
+    cursor: pointer;
+}
+
+.login .login-form .form-group input{
+     display: block;
+     border: 1px solid #f0f0f0;
+     padding: 12px 0;
+     width: 100%;
+     margin: 10px 0;
+     cursor: pointer;
+}
+
+.login .login-form .form-group input[type="submit"]{
+    background: #1e1c1c;
+    color: #fff;
+    margin-top: 1rem;
+    border-radius: 2px;
+    font-size: 15px;
+    
+}
+.login .login-form .form-group input[type="submit"]:hover{
+    background: #1e1c1c;
+    color: #fff;
+    margin-top: 1rem;
+    border-radius: 2px;
+    font-size: 15px;
+    opacity: .8;
+}
+
+.login .login-form .form-group a{
+  color: #000;
+}
+.login .login-box img{
+  cursor: pointer;
+}
+
+.alert_danger {
+  color: #951414;
+  margin: 1rem 0 1rem 0;
+}
+
+@media (max-width:960px) {
+    .login .login-content .grid-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,147 @@
+<section class="services">
+  <div class="container">
+    <div class="services-content">
+      <h3>Services Page</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
+        possimus tempora? Illo nostrum culpa enim laudantium inventore magni
+        fugiat quia.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- services tab content -->
+
+<section class="services-tab-content">
+  <div class="container">
+    <div class="service-title">
+      <h3>services</h3>
+    </div>
+    <div class="services-content-item">
+      <div class="grid-3">
+        <div class="card">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <div class="services-body">
+            <h3>DEVELOPMENT</h3>
+            <p>
+              Lorem ipsum dolor consectetur dolor consectetur adipisicing
+              incididunt eiusmod tempor incididunt laboredolore adipisicing.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-shield"></i>
+          <div class="services-body">
+            <h3>WEB DESIGN</h3>
+            <p>
+              Lorem ipsum dolor consectetur dolor consectetur adipisicing
+              incididunt eiusmod tempor incididunt laboredolore adipisicing.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-docker"></i>
+          <div class="services-body">
+            <h3>SEO</h3>
+            <p>
+              Lorem ipsum dolor consectetur dolor consectetur adipisicing
+              incididunt eiusmod tempor incididunt laboredolore adipisicing.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-globe"></i>
+          <div class="services-body">
+            <h3>GRAPHIC DESIGN</h3>
+            <p>
+              Lorem ipsum dolor consectetur dolor consectetur adipisicing
+              incididunt eiusmod tempor incididunt laboredolore adipisicing.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-bullseye"></i>
+          <div class="services-body">
+            <h3>CONTENT WRITING</h3>
+            <p>
+              Lorem ipsum dolor consectetur dolor consectetur adipisicing
+              incididunt eiusmod tempor incididunt laboredolore adipisicing.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-temperature-half"></i>
+          <div class="services-body">
+            <h3>HTML BASIC</h3>
+            <p>
+              Lorem ipsum dolor consectetur dolor consectetur adipisicing
+              incididunt eiusmod tempor incididunt laboredolore adipisicing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slick-carosel-service">
+  <div class="crosel-title">
+    <h2>WHAT CLIENTS SAY.</h2>
+  </div>
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    @for (slide of managers; track slide.image) {
+    <div ngxSlickItem class="slide">
+      <p>{{ slide.description }}</p>
+
+      <img [src]="slide.image" alt="" />
+      <h2>{{ slide.title }}</h2>
+    </div>
+
+    }
+  </ngx-slick-carousel>
+</section>
+
+<section class="sorts">
+  <div class="container">
+    <div class="section-sorts-tabs">
+      <h2>Services Sorting</h2>
+      <p>
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at it's layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters,
+      </p>
+    </div>
+    <form class="form-sort">
+      <div class="form-group">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          name="name"
+          id="name"
+          placeholder="Filter & Sorting Products..."
+        />
+      </div>
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <div class="sorts-content">
+      <div class="grid-4">
+        <div class="card" *ngFor="let item of sorts | filters : searchTerm">
+          <img [src]="item.image" alt="{{ item.title }}" class="sorts-image" />
+          <div class="sorts-body">
+            <h2>{{ item.title }}</h2>
+            <p>
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

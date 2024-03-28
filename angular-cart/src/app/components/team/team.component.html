@@ -1,0 +1,215 @@
+<section class="team">
+ <div class="container">
+      <div class="team-page">
+        <h1>our team</h1>
+        <p><a [routerLink]="['/']">Home</a> / <a [routerLink]="['/about']">About</a> / <a [routerLink]="['/services']">services</a></p>
+      </div>
+    </div>
+ </section>
+
+ <!-- team members -->
+ <section class="team-members">
+    <div class="container">
+        <div class="team-members-text">
+            <p>Team Members</p>
+            <h1>Our Master Chefs</h1>
+        </div>
+        <div class="team-members-content">
+            <div class="grid-4">
+                <div class="card">
+                    <img src="/assets/pexels_1.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Justin Shiffer</h2>
+                        <p>Photography of a Guy Wearing Green Shirt
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/pexels_2.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Samanta James</h2>
+                        <p>Woman With Brown Coat and Gray Top
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/pexels_3.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Maria Jones</h2>
+                        <p>Woman Wearing Black Eyeglasses
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/pexels_4.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Stefan Stefancik</h2>
+                        <p>Man on Gray Shirt Portrait
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/pexels_5.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Nicholas Swats</h2>
+                        <p>Photo of Man Wearing Red Shirt
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/pexels_6.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Samade Ismayilove</h2>
+                        <p>Man Wearing White Shirt
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                     <img src="/assets/pexels_7.png" alt="">
+                    <div class="team-members-body">
+                        <h2>Daniel Xavier</h2>
+                        <p> Man Wearing Sunglasses
+                        </p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/pexels_8.png" alt="pexels">
+                    <div class="team-members-body">
+                        <h2>Jemmy Kitchum</h2>
+                        <p>Smiling Man Wearing</p>
+                    </div>
+                    <div class="team-members-body-icons">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <section class="slick-carosel-service">
+   <div class="container">
+    <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    @for (slide of teams; track slide.image) {
+    <div ngxSlickItem class="slide">
+     <img [src]="slide.image" alt="" />
+      
+    </div>
+
+    }
+  </ngx-slick-carousel>
+   </div> 
+ </section>
+
+ <!-- DIGITAL SERVICES -->
+
+ <section class="digital-service">
+     <div class="grid-2">
+        <div class="digital-service-1">
+            <h2>LOOKING FOR EXCLUSIVE DIGITAL SERVICES?</h2>
+            <p>Proin fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Integer non dapibus diam, ac eleifend lectus.</p>
+            <a href="">Lets Talk</a>
+        </div>
+        <!-- <div class="digital-service-2">
+             <img src="/assets/banner.png" alt="">
+        </div> -->
+     </div>
+ </section>
+
+ <!-- Simple Powerful. -->
+
+ <section class="simple-Powerfull">
+    <div class="container">
+        <div class="grid-2">
+             <div class="simple-powerfull-item">
+                <div class="digital-service-1">
+                    <h1>Simple. Intuitive. Powerful.</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="simple-content">
+                    <h4>BEAUTIFUL, MODERN DESIGN</h4>
+                    <p>Mauris vehicula tortor id augue rutrum consequat ac at massa. Interdum et malesuada fames ac ante ipsum primis.</p>
+                </div>
+                <div class="simple-content">
+                    <h4>STUNNING FLEXIBILITY</h4>
+                    <p>Phasellus consequat facilisis volutpat ma faucibus odio vitae semper. Ae volutpat lobortis</p>
+                </div>
+                <div class="simple-content">
+                    <h4>STUNNING FLEXIBILITY</h4>
+                    <p>Phasellus consequat facilisis volutpat ma faucibus odio vitae semper. Ae volutpat lobortis..</p>
+                </div>
+                <div class="simple-content">
+                    <h4>RELIABLE AND SECURE PLATFORM</h4>
+                    <p>Phasellus consequat facilisis volutpat ma faucibus odio vitae semper. Ae volutpat lobortis.</p>
+                </div>
+             </div>
+            
+            <div class="digital-service-2">
+                 <img src="/assets/business.png" alt="">
+            </div>
+         </div>
+    </div>
+</section>
+
+ <!-- Creative Project -->
+
+ <section class="simple-Powerfull">
+    <div class="container">
+        <div class="grid-2">
+            <div class="digital-service-2">
+                <img src="/assets/man.png" alt="">
+           </div>
+             <div class="simple-powerfull-item">
+                <div class="digital-service-1">
+                    <h1>Creative Project</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <a href="">View Online</a>
+                </div>
+                
+             </div>
+            
+           
+         </div>
+    </div>
+</section>

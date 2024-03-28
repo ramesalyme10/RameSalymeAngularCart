@@ -1,0 +1,126 @@
+<section class="login">
+  <div class="container">
+    <div class="login-text">
+      <h1>Create an Account</h1>
+    </div>
+    <div class="login-content">
+      <div class="grid-2">
+        <div class="login-box">
+          <img src="/assets/images_1.png" alt="images" />
+        </div>
+        <div class="login-box">
+            
+          <form
+            [formGroup]="formData"
+            class="login-form"
+            (ngSubmit)="onGroup()"
+          >
+            <div class="form-group">
+              <label>Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                minlength="6"
+                maxlength="20"
+                formControlName="name"
+                id="name"
+                placeholder="Enter New Name"
+              />
+            </div>
+             <div *ngIf="submitted && (f['name'].errors)">
+               <div class="alert_danger" *ngIf="f['name'].errors['required']">
+                    Name is Required
+               </div>
+               <div class="alert_danger" *ngIf="f['name'].errors['minlength']">
+                    Name must be at least 6 characters
+               </div>
+               <div class="alert_danger" *ngIf="f['name'].errors['maxlength']">
+                    Name  must not exceed 20 characters
+               </div>
+             </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                formControlName="email"
+                name="email"
+                id="email"
+                placeholder="Enter New Email"
+              />
+               
+              <div *ngIf="submitted && (f['email'].errors)">
+                <div class="alert_danger" *ngIf="f['email'].errors['required']">
+                     Email is Required
+                </div>
+                <div class="alert_danger" *ngIf="f['email'].errors['email']">
+                     Email is invalid
+                </div>
+               
+              </div>
+
+            </div>
+             
+           
+            <div class="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                formControlName="password"
+                name="password"
+                id="password"
+                minlength="6"
+                maxlength="40"
+                placeholder="Enter New Password"
+              />
+
+              <div *ngIf="submitted && (f['password'].errors)">
+                <div class="alert_danger" *ngIf="f['password'].errors['required']">
+                     password is Required
+                </div>
+                <div class="alert_danger" *ngIf="f['password'].errors['minlength']">
+                     password must be at least 6 characters
+                </div>
+                <div class="alert_danger" *ngIf="f['password'].errors['maxlength']">
+                     password  must not exceed 40 characters
+                </div>
+              </div>
+            </div>
+          
+            <div class="form-group">
+              <label>ConfirmPassword</label>
+              <input
+                type="password"
+                formControlName="confirmPassword"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder="Enter New ConfirmPassword"
+              />
+              
+              <div *ngIf="submitted && (f['confirmPassword'].errors)">
+                <div class="alert_danger" *ngIf="f['confirmPassword'].errors['required']">
+                     ConfirmPassword is Required
+                </div>
+                <div class="alert_danger" *ngIf="f['confirmPassword'].errors['passwordMisMatch']">
+                  Password does'nt match.
+             </div>
+               
+              </div>
+
+            </div>
+           
+            <div class="form-group">
+              <p>have an account <a [routerLink]="['/login']">Signup</a></p>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Sign In" />
+            </div>
+            <div class="message_alert">
+              {{errorMessage}}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

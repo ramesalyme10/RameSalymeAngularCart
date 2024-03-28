@@ -1,0 +1,127 @@
+<header class="home">
+  <div class="container">
+    <div class="header-lamoda">
+      <div class="nav-menu-list" [class.showMenu]="isToggle">
+        <ul class="nav-list">
+          <li><a [routerLink]="['/']" class="nav_link">Home</a></li>
+          <li><a [routerLink]="['/about']" class="nav_link">About</a></li>
+          <li><a [routerLink]="['/team']" class="nav_link">Team</a></li>
+          <li><a [routerLink]="['/services']" class="nav_link">Services</a></li>
+          <li class="dropDown_item">
+            <div class="nav_link">
+              Pages
+              <i
+                style="color: #fff"
+                class="fa-solid fa-caret-down dropDown_arrow"
+              ></i>
+            </div>
+            <ul class="dropDown_menu">
+              <li>
+                <a [routerLink]="['/portfolio']" class="dropDown_link">
+                  <i class="fa-brands fa-tiktok"></i>Portfolio
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/services']" class="dropDown_link">
+                  <i class="fa-solid fa-circle-up"></i> Create Products
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/services']" class="dropDown_link">
+                  <i class="fa-solid fa-chart-bar"></i>Users
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a [routerLink]="['/services']" class="nav_link">Contact</a></li>
+          <li class="dropDown_item">
+            <div class="nav_link">
+              SignUp
+              <i
+                style="color: #fff"
+                class="fa-solid fa-caret-down dropDown_arrow"
+              ></i>
+            </div>
+            <ul class="dropDown_menu">
+              <li>
+                <a [routerLink]="['/services']" class="dropDown_link">
+                  <i class="fa-solid fa-user"></i>User
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/login']" class="dropDown_link">
+                  <i class="fa-regular fa-envelope"></i> Login
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="flex">
+        <div class="header-nav-menu-logo flex">
+          <div class="logo">
+            <img [routerLink]="['/']" src="/assets/logo.png" alt="" class="logo-image" />
+          </div>
+          <div class="header-nav-menu">
+            <nav>
+              <ul class="flex nav-menu" [class.active]="isToggle">
+                <li><a [routerLink]="['/']">Home</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+               
+                <li class="dropDown-nav-item">
+                  Pages
+                  <i
+                    style="color: #fff"
+                    class="fa-solid fa-caret-down dropDown_arrow"
+                  ></i>
+                  <ul class="portfolio-menu">
+                    <li><a [routerLink]="['/portfolio']">Portfolio</a></li>
+                    <li>
+                      <a [routerLink]="['/create-products']">create products</a>
+                    </li>
+                    <li>
+                      <a [routerLink]="['/testimonials']">testimonials</a>
+                    </li>
+                    <li><a [routerLink]="['/team']">Team</a></li>
+                  </ul>
+                </li>
+                <li><a [routerLink]="['/services']">services</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <ul class="flex">
+            <li>
+              <i [routerLink]="['/cart']" class="fa-solid fa-cart-shopping"></i>
+              <span>{{ carts.length }}</span>
+            </li>
+
+            @if (userInfo.name) {
+            <li class="drobDown-right">
+              {{ userInfo.name
+              }}<i
+                style="color: #fff"
+                class="fa-solid fa-caret-down dropDown_arrow"
+              ></i>
+              <ul class="drobDown-rigth-menu">
+                <li (click)="onLogOut()">LogOut</li>
+              </ul>
+            </li>
+            } @else {
+            <li><a [routerLink]="['/login']">SignUp</a></li>
+            }
+
+            <li (click)="onToggle()">
+              @if (isToggle) { <i class="fa-solid fa-xmark"></i>} @else {<i
+                class="fa-solid fa-bars"
+              ></i
+              >}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

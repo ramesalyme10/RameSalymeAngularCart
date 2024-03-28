@@ -1,0 +1,279 @@
+.team {
+  background: url("/assets/people.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.team .team-page {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.team .team-page h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.team .team-page a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.team-members .team-members-text {
+  text-align: center;
+  margin: 5rem 0 5rem 0;
+  cursor: pointer;
+}
+
+.team-members .team-members-text p {
+  color: #2a2727;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.team-members .team-members-text h1 {
+  font-size: 40px;
+  color: #201f1f;
+}
+
+.team-members .team-members-content .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.team-members .team-members-content .card {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.team-members .team-members-content .card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team-members .team-members-content .card h2 {
+  font-size: 20px;
+  margin: 10px 0 8px 0;
+}
+
+.team-members .team-members-content .card p {
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.team-members .card .team-members-body-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+.team-members .card:hover .team-members-body-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transform: translateY(-8px);
+  opacity: 10;
+}
+
+.team-members .card .team-members-body-icons i {
+  padding: 20px;
+  background: #c76a0d;
+  margin: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 38px 38px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.team-members .card:hover .team-members-body-icons i {
+  padding: 20px;
+  background: #c76a0d;
+  margin: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 38px 38px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.slick-carosel-service {
+  margin: 10rem 0 8rem 0;
+}
+
+.slick-carosel-service img {
+  width: 100px;
+  height: auto;
+}
+
+/* digital-service */
+
+.digital-service {
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(52, 54, 67, 0.52),
+      rgba(45, 35, 43, 0.73)
+    ),
+    url("/assets/pexels_9.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  cursor: pointer;
+  display: flex;
+}
+
+.digital-service .digital-service-1 {
+  color: #ffffff;
+  padding: 3rem;
+  cursor: pointer;
+}
+
+.digital-service .digital-service-1 p {
+  margin: 15px 0 15px 0;
+  line-height: 1.7;
+}
+
+.digital-service .digital-service-1 a {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+/* simple-Powerful. */
+
+.simple-Powerfull {
+  margin: 5rem 0;
+  cursor: pointer;
+}
+
+.simple-Powerfull .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.simple-Powerfull .simple-powerfull-item {
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.simple-Powerfull .simple-content {
+  margin-top: 2rem;
+}
+
+.simple-Powerfull .simple-powerfull-item h1 {
+  font-size: 40px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.simple-Powerfull .simple-powerfull-item p {
+  opacity: 0.5;
+  line-height: 1.4;
+  max-width: 450px;
+}
+
+.simple-Powerfull .simple-content h4 {
+  color: #555;
+  opacity: 0.5;
+}
+
+.simple-Powerfull .simple-content p {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.simple-Powerfull .simple-powerfull-item a {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+.simple-Powerfull .simple-powerfull-item a:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+  .team-members .team-members-content .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .digital-service .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .digital-service .digital-service-2 img {
+    position: relative;
+    top: -50px;
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+    height: auto;
+    padding: 1rem;
+  }
+  .simple-Powerfull .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .team-members .team-members-content .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .team-members .team-members-content .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

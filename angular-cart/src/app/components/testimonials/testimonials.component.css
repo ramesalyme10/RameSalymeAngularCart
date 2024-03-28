@@ -1,0 +1,218 @@
+.team {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(52, 54, 67, 0.52),
+      rgba(45, 35, 43, 0.73)
+    ),
+    url("/assets/test.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.team .team-page {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.team .team-page h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.team .team-page a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.Our-Clients .slide {
+  background: #ebe0e0;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Our-Clients {
+  margin: 5rem 0 5rem 0;
+}
+
+.Our-Clients .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Our-Clients .our-client-card {
+  position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 5rem 0;
+  cursor: pointer;
+}
+.Our-Clients .our-client-card:hover {
+  position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  background: #10cd06;
+  color: #fff !important;
+  padding: 20px;
+  margin: 5rem 0;
+  cursor: pointer;
+}
+
+
+.Our-Clients .our-client-card img {
+  position: absolute;
+  top: -50px;
+  right: 40%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.Our-Clients .our-client-card h2 {
+  margin: 2rem 0 1rem 0;
+  color: #393838;
+}
+
+.Our-Clients .our-client-card p {
+  opacity: 0.5;
+  line-height: 1.3;
+}
+
+.Our-Clients .our-client-text {
+  text-align: center;
+  cursor: pointer;
+}
+
+.Our-Clients .our-client-text p {
+  color: #6d9524;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.Our-Clients .our-client-text h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.Our-Clients .slide img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* litora-content */
+.Litora {
+    background: url("/assets/office.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5rem 0 0;
+  }
+  
+  .Litora .liotora-text {
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+  }
+  .litora-content .litora-content-item .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .litora-content .litora-content-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .Litora .litora-content {
+    padding: 5rem 0 7rem 0;
+    cursor: pointer;
+  }
+  
+  .Litora .litora-content .grid-2{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      
+  }
+  
+  .Litora .litora-content .flex-tab{
+      color: #fff;
+  }
+  
+  .Litora .litora-content .text{
+      background: #fff;
+      padding: 20px;
+      border-radius: 25px 0;
+      margin: 2rem 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  /* choose-us */
+  .choose-us{
+    margin: 5rem 0 5rem 0;
+  }
+
+
+
+@media (max-width: 1200px) {
+  .Our-Clients .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Our-Clients .our-client-card img {
+    position: absolute;
+    top: -50px;
+    right: 45%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width:830px) {
+    .Litora .litora-content .grid-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+@media (max-width: 500px) {
+  .Our-Clients .our-client-card img {
+    position: absolute;
+    top: -50px;
+    right: 40%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+}

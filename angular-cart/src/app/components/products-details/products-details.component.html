@@ -1,0 +1,45 @@
+<section class="products-details">
+  <div class="container">
+    <div class="products-details-text">
+      <h2>Single Products</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+        deleniti consequuntur odit saepe quas aspernatur voluptates similique,
+        corporis enim ea possimus omnis cupiditate dolorem, doloremque adipisci,
+        earum impedit eius accusamus?
+      </p>
+    </div>
+    <div class="products-details-content">
+      <div class="products-details-grid-2">
+        <div class="products-detais-item">
+          <img [src]="productsDetails.image" alt={{productsDetails.title}} />
+        
+        </div>
+        <div class="products-detais-item">
+          <h2>{{productsDetails.title}}</h2>
+          <p class="products-price">${{productsDetails.price}}</p>
+          <p class="products-rating">Rating 4.8</p>
+          <p class="products-brand">Brand: <span>{{productsDetails.category}}</span></p>
+         
+            <div class="products-details-description">Description:</div>
+           <span> {{productsDetails.description}}</span>
+         
+          <p class="available">Avaliable Color: <span> White / Black</span></p>
+          <div  class="Specification">Specification:</div>
+            <span>Lorem ipsum dolor sit
+            Amet, consectetur
+            Adipiscing elit,set
+            Duis aute irure
+            Ut enim ad minim
+            Dolore magna aliqua
+            Excepteur sint</span>
+            <div class="products-details_btn">
+                <button>Buy</button>
+                <button (click)="addToCart(productsDetails)">Add To Cart</button>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+<section class="team">
+  <div class="container">
+    <div class="team-page">
+      <h1>portfolio</h1>
+      <p>
+        <a [routerLink]="['/']">Home</a> /
+        <a [routerLink]="['/about']">About</a> /
+        <a [routerLink]="['/services']">services</a>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- portfolio -->
+<section class="portfolio">
+  <div class="container">
+    <div class="flex portfolio-template">
+      <div class="portfolio-title">
+        <h2>Our Portfolio</h2>
+      </div>
+      <div class="portfolio-categories">
+        <div class="flex">
+          <button (click)="getCategories('')">All</button>
+          <button (click)="getCategories('Apps')">Apps</button>
+          <button (click)="getCategories('Design')">Design</button>
+          <button (click)="getCategories('PHOTOGRAPHY')">Photography</button>
+          <button (click)="getCategories('websites')">Websites</button>
+          <button (click)="getCategories('Graphic')">Graphic</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <app-portfolio-item *ngFor="let item of categories" [item]="item" />
+    </div>
+  </div>
+</section>
+
+<!-- SPECTRUM -->
+<section class="spectrum">
+  <div class="container">
+    <div class="spectrum-text">
+      <h2>SPECTRUM</h2>
+      <p>Web Design • Photography • Product Design</p>
+      <a href="">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- activity -->
+
+<section class="activity">
+  <div class="container">
+    <div class="activity-title">
+      <h2>ACTIVITY OF THE MONTH</h2>
+    </div>
+    <div class="activity-content">
+      <section class="slick-carosel-service">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          @for (slide of activates; track slide.image) {
+          <div ngxSlickItem class="slide">
+            <img [src]="slide.image" alt="" />
+            <div class="slide-body">
+              <h5>{{ slide.description }}</h5>
+            </div>
+          </div>
+
+          }
+        </ngx-slick-carousel>
+      </section>
+    </div>
+  </div>
+</section>

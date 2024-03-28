@@ -1,0 +1,50 @@
+<section class="cart" *ngIf="isCart">
+  <div class="container">
+    <div class="cart-items">
+      @if (carts.length === 0) {
+      <div class="cart-title-blank">
+        <p>Your cart is empty, please buy something.</p>
+      </div>
+      } @else {
+      <div class="cart-content">
+        <div class="cart-items-tab" *ngFor="let cart of carts">
+          <img [src]="cart.image" alt="" />
+          <div class="cart-title">{{ cart.title }}</div>
+          <div class="cart-description">
+            <p>{{ cart.description }}</p>
+          </div>
+
+          <div class="cart-quantity flex">
+            <div>
+              <i (click)="decrement(cart._id)" class="fa-solid fa-minus"></i>
+            </div>
+            <div class="flex"><span>Qty:</span>{{ cart["qty"] }}</div>
+            <div>
+              <i (click)="increment(cart._id)" class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="cart-price price-flex">
+            <span>Price:</span> ${{ cart.price }}
+          </div>
+          <button>
+            <i
+              (click)="deleteProducts(cart._id)"
+              class="fa-solid fa-trash-can"
+            ></i>
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+    <div class="flex cart-margen">
+      <div class="cart-total-price" *ngIf="carts.length > 0">
+        <p class="total-price">Total:{{ cart.getTotalPrice().toFixed(2) }}</p>
+      </div>
+      <div class="cart-remove-all" *ngIf="carts.length > 0">
+        <button>
+          <i (click)="deleteAllProducts()" class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

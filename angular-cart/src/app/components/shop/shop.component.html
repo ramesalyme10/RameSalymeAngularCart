@@ -1,0 +1,106 @@
+<section class="team">
+  <div class="container">
+    <div class="team-page">
+      <h1>Shop</h1>
+      <p>
+        <a [routerLink]="['/']">Home</a> /
+        <a [routerLink]="['/about']">About</a> /
+        <a [routerLink]="['/services']">services</a>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- shop page -->
+<section class="shop">
+  <div class="container">
+    <div class="shop-page-text">
+      <h1>Shop</h1>
+      <p>
+        Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.
+        Et netus et malesuada fames ac turpis egestas tristique senectus..
+      </p>
+    </div>
+     
+    <div class="shop-page">
+      <div class="grid-2-page">
+        <div class="shop-page-sidebar">
+          <div class="shop-page-categories">
+            <h2>Categories</h2>
+          </div>
+          <ul class="gender-nav-menu">
+            <li class="gender-drobDown-link">
+              Gender
+              <i
+                (click)="onGender()"
+                style="color: #fff"
+                class="fa-solid fa-caret-down dropDown_arrow"
+              ></i>
+            </li>
+            <ul *ngIf="isGender" class="dropDown-shop-page">
+              <li (click)="getCategories('men')"><a>Men</a></li>
+              <li (click)="getCategories('women')"><a>Women</a></li>
+            </ul>
+          </ul>
+          <ul class="gender-nav-menu">
+            <li class="gender-drobDown-link">
+              Sale
+              <i
+                (click)="onSale()"
+                style="color: #fff"
+                class="fa-solid fa-caret-down dropDown_arrow"
+              ></i>
+            </li>
+            <ul *ngIf="isSale" class="dropDown-shop-page">
+              <li (click)="getCategories('sport')"><a>Sport</a></li>
+              <li (click)="getCategories('luxury')"><a>Luxury</a></li>
+            </ul>
+          </ul>
+          <ul class="gender-nav-menu">
+            <li class="gender-drobDown-link">
+              Product
+              <i
+                (click)="onProduct()"
+                style="color: #fff"
+                class="fa-solid fa-caret-down dropDown_arrow"
+              ></i>
+            </li>
+            <ul *ngIf="isProduct" class="dropDown-shop-page">
+              <li (click)="getCategories('bag')"><a>Bag</a></li>
+              <li (click)="getCategories('shoes')"><a>Shoes</a></li>
+              <li (click)="getCategories('sunglass')"><a>Sunglass</a></li>
+            </ul>
+          </ul>
+        </div>
+        <div class="shop-page-products">
+          <form class="shop-form flex">
+            <div class="shop_btn">
+              <button (click)="getCategories('')">All Products</button>
+              <button (click)="getCategories('sweet')">Sweet</button>
+              <button (click)="getCategories('flowers')">Flowers</button>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                [(ngModel)]="filterSearch"
+                placeholder="Checking New Products..."
+              />
+            </div>
+          </form>
+
+          <div class="shop-page-content">
+            <div class="grid-3">
+              <app-shop-items
+                *ngFor="let product of categories | productsPipe : filterSearch"
+                [product]="product"
+                (onDelete)="productsDelete(product._id)"
+                (onAdd)="onAddProduct(product)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

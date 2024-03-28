@@ -1,0 +1,289 @@
+.services {
+  position: relative;
+  background: url("/assets/about.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: 0 0 0 rgba(0, 0, 0, 0.7);
+}
+
+.services .services-content {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.services .services-content h3 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.services .services-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* about text */
+
+.about .about-text {
+  max-width: 600px;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.about .about-text .text-md {
+  font-size: 25px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.about .about-text h2 {
+  margin: 15px 0 10px 0;
+  font-size: 35px;
+  font-weight: 200;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.about .about-desc {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  opacity: 0.5;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+/* about-Branding */
+
+.about-Branding {
+  margin: 5rem 0 5rem 0;
+}
+.about-Branding .about-brand {
+  text-align: center;
+  cursor: pointer;
+}
+
+.about-Branding .about-brand i {
+  font-size: 45px;
+  color: #fc6e51;
+}
+
+.about-Branding .about-brand h3 {
+  margin: 20px 0 15px 0;
+  font-weight: 100;
+  opacity: 0.6;
+}
+.about-Branding .about-brand p {
+  opacity: 0.5;
+}
+
+/* our history */
+.our-history {
+  margin: 5rem 0 5rem 0;
+}
+
+.our-history .grid-2 {
+  gap: 10rem;
+}
+.our-history .our-history-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.our-history .our-history-card h2 {
+  font-size: 30px;
+  color: #383434;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.our-history .our-history-card p {
+  line-height: 1.8;
+  opacity: 0.5;
+}
+.our-history .our-history-card .our-history-desc p {
+  line-height: 1.3;
+  opacity: 0.5;
+}
+
+.our-history .our-history-card .flex {
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.our-history .our-history-circle {
+  margin: 0 1.5rem;
+  background: #fff;
+  color: #fff7f7;
+  border: 3px solid #030303;
+  border-radius: 50%;
+}
+
+.our-history .our-history-time,
+.our-history-desc {
+  margin-top: 2rem;
+}
+
+/* trainer */
+
+.trainer{
+  margin: 5rem 0 5rem 0;
+  
+}
+
+.trainer .trainer-text {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.trainer .trainer-content{
+  margin-top: 5rem;
+}
+
+.trainer .trainer-text p {
+  color: #4b4a4a;
+  text-transform: uppercase;
+  line-height: 1.9;
+}
+
+.trainer .trainer-text h2 {
+  font-size: 40px;
+  color: #333232;
+}
+
+.trainer .trainer-content .grid-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+ .trainer .trainer-content-tab{
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 5px;
+ }
+ .trainer .trainer-content-tab:hover{
+   position: relative;
+   overflow: hidden;
+   opacity: .7;
+ }
+
+.trainer .trainer-content-tab .tariner-icons{
+  position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+  
+}
+
+.trainer .trainer-content-tab .tariner-icons i{
+  position: relative;
+   margin: 0 6px;
+   background: #343148;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   transition: .3s ease-in-out ;
+   transform: translateY(100px);
+   opacity: 0;
+   
+}
+.trainer .trainer-content-tab .tariner-icons i:hover{
+   margin: 0 6px;
+   background: #ffffff;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #343148;
+   transition: .3s ease-in-out ;
+   transform: translateY(100px);
+   opacity: 9;
+}
+
+
+
+.trainer .trainer-content-tab:hover .tariner-icons i{
+   transform: translateY(0);
+   opacity: 1;
+}
+
+.trainer .trainer-content-tab h2{
+   font-size: 18px;
+   color: #282626;
+   margin: 1rem 0 0.5rem 0;
+}
+.trainer .trainer-content-tab p{
+    opacity: .5;
+}
+
+.trainer .trainer-content-tab img{
+  width: 100%;
+  
+}
+
+/* media query */
+@media (max-width: 950px) {
+  .our-history .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer .trainer-content .grid-4{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    cursor: pointer;
+}
+}
+@media (max-width: 850px) {
+  .about-Branding .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .trainer .trainer-content .grid-4{
+    display: grid;
+    grid-template-columns:1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    cursor: pointer;
+}
+}

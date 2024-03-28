@@ -1,0 +1,145 @@
+<section class="create-products">
+  <div class="container">
+    <div class="create-products-works">
+      <h2>Create Products</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis et
+        officiis asperiores fugiat blanditiis nobis placeat eveniet voluptate
+        repellendus dicta eum eos soluta, sed a?
+      </p>
+    </div>
+        @if (isLoading) {
+          <div  class="loading">
+            <h1>Loading...</h1>
+         </div>
+        } 
+         
+        @else {
+          <form
+          class="form-products"
+          [formGroup]="ngForm"
+          enctype="multipart/form-data"
+           (ngSubmit)="onSubmit()"
+        >
+          <div class="form-group">
+            <label>Title</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              minlength="6"
+              maxlength="40"
+              formControlName="title"
+              placeholder="Enter New Title"
+            />
+
+            <div class="error_alert" *ngIf="submitted && (f['title'].errors)">
+              <div *ngIf="f['title'].errors['required']">
+                  title is required
+              </div>
+              <div *ngIf="f['title'].errors['minlength']">
+                  title must be at least 6 character
+              </div>
+          </div>
+
+          </div>
+          <div class="form-group">
+            <label>Image</label>
+            <input
+              type="text"
+              formControlName="image"
+              name="image"
+              id="image"
+              placeholder="Enter New Image"
+            />
+             
+            <div class="error_alert" *ngIf="submitted && (f['image'].errors)">
+              <div *ngIf="f['image'].errors['required']">
+                  image is required
+              </div>
+              
+          </div>
+
+          </div>
+          <div class="form-group">
+            <textarea
+              name="description"
+              id="description"
+              formControlName="description"
+              cols="30"
+              rows="10"
+            ></textarea>
+              
+            <div class="error_alert" *ngIf="submitted && (f['description'].errors)">
+              <div *ngIf="f['description'].errors['required']">
+                  description is required
+              </div>
+             
+          </div>
+              
+
+            <div class="form-group">
+              <label>Price</label>
+              <input
+                type="text"
+                name="price"
+                formControlName="price"
+                id="price"
+                placeholder="Enter New Price"
+              />
+
+              <div class="error_alert" *ngIf="submitted && (f['price'].errors)">
+                <div *ngIf="f['price'].errors['required']">
+                    price is required
+                </div>
+               
+            </div>
+            </div>
+            <div class="form-group">
+              <label>Rating</label>
+              <input
+                type="text"
+                name="rating"
+                formControlName="rating"
+                id="rating"
+                placeholder="Enter New Rating"
+              />
+
+              <div class="error_alert" *ngIf="submitted && (f['rating'].errors)">
+                <div *ngIf="f['rating'].errors['required']">
+                    rating is required
+                </div>
+               
+            </div>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <input
+                type="text"
+                formControlName="category"
+                minlength="20"
+                maxlength="40"
+                name="category"
+                id="category"
+                placeholder="Enter New Title"
+              />
+
+              <div class="error_alert" *ngIf="submitted && (f['category'].errors)">
+                <div *ngIf="f['category'].errors['required']">
+                    category is required
+                </div>
+                <div *ngIf="f['category'].errors['minlength']">
+                    category must be at least 20 character
+                </div>
+            </div>
+
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Create New Products" />
+            </div>
+          </div>
+        </form>
+        }
+    
+  </div>
+</section>

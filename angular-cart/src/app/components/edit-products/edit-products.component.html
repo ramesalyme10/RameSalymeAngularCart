@@ -1,0 +1,93 @@
+<section class="create-products">
+    <div class="container">
+      <div class="create-products-works">
+        <h2>Update Products</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis et
+          officiis asperiores fugiat blanditiis nobis placeat eveniet voluptate
+          repellendus dicta eum eos soluta, sed a?
+        </p>
+      </div>
+           
+           
+         
+            <form
+            class="form-products"
+             [formGroup]="ngForm"
+            (ngSubmit)="onSubmit()"
+            
+          >
+            <div class="form-group">
+              <label>Title</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                formControlName="title"
+                placeholder="Enter New Title"
+              />
+            
+             
+             
+            
+            </div>
+            <div class="form-group">
+              <label>Image</label>
+              <input
+                type="text"
+                formControlName="image"
+                name="image"
+                id="image"
+                placeholder="Enter New Image"
+              />
+               
+              
+
+            </div>
+            <div class="form-group">
+              <textarea
+                name="description"
+                id="description"
+                formControlName="description"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <div class="form-group">
+                <label>Price</label>
+                <input
+                  type="text"
+                  name="price"
+                  formControlName="price"
+                  id="price"
+                  placeholder="Enter New Price"
+                />
+              </div>
+              <div class="form-group">
+                <label>Rating</label>
+                <input
+                  type="text"
+                  name="rating"
+                  formControlName="rating"
+                  id="rating"
+                  placeholder="Enter New Rating"
+                />
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <input
+                  type="text"
+                  formControlName="category"
+                  name="name"
+                  id="name"
+                  placeholder="Enter New Title"
+                />
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Update Products" />
+              </div>
+            </div>
+          </form>
+          
+      
+    </div>
+  </section>

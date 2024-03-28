@@ -1,0 +1,316 @@
+<section class="slick-carosel">
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    @for (slide of slides; track slide.image) {
+    <div ngxSlickItem class="slide">
+      <div
+        style="background: rgba(170, 167, 156, 0.4) url({{slide.image}}); height: 100vh; background-position: center; background-size: cover;"
+        class="banner-slide"
+      >
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.description }}</p>
+        <a [routerLink]="['/portfolio']">view portfolio</a>
+      </div>
+    </div>
+    }
+  </ngx-slick-carousel>
+</section>
+
+<!-- DEVELOPMENT -->
+
+<section class="development">
+  <div class="container">
+    <div class="grid-3">
+      <div class="development-tab">
+        <div class="flex">
+          <div class="leaf-icon">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div class="clean-modern">
+            <h2>CLEAN & MODERN DESIGN</h2>
+            <p>
+              Lorem ipsum dolor consectetur adipisicing incididunt eiusmod
+              tempor incididunt laboredolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="development-tab">
+        <div class="flex">
+          <div class="leaf-icon">
+            <i class="fa-regular fa-paper-plane"></i>
+          </div>
+          <div class="clean-modern">
+            <h2>ILLUSTRATION</h2>
+            <p>
+              Lorem ipsum dolor consectetur adipisicing incididunt eiusmod
+              tempor incididunt laboredolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="development-tab">
+        <div class="flex">
+          <div class="leaf-icon">
+            <i class="fa-solid fa-life-ring"></i>
+          </div>
+          <div class="clean-modern">
+            <h2>APP DEVELOPMENT</h2>
+            <p>
+              Lorem ipsum dolor consectetur adipisicing incididunt eiusmod
+              tempor incididunt laboredolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="development-tab">
+        <div class="flex">
+          <div class="leaf-icon">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <div class="clean-modern">
+            <h2>WEB DEVELOPMENT</h2>
+            <p>
+              Lorem ipsum dolor consectetur adipisicing incididunt eiusmod
+              tempor incididunt laboredolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="development-tab">
+        <div class="flex">
+          <div class="leaf-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="clean-modern">
+            <h2>DIGITAL DESIGN</h2>
+            <p>
+              Lorem ipsum dolor consectetur adipisicing incididunt eiusmod
+              tempor incididunt laboredolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="development-tab">
+        <div class="flex">
+          <div class="leaf-icon">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <div class="clean-modern">
+            <h2>FULLY RESPONSIVE</h2>
+            <p>
+              Lorem ipsum dolor consectetur adipisicing incididunt eiusmod
+              tempor incididunt laboredolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- atachment -->
+<section class="atachment">
+    <div class="container">
+        <div class="atachment-body">
+            <div class="grid-4">
+                <div class="atachment-card">
+                    <i class="fa-sharp fa-regular fa-face-smile"></i>
+                    <p>841</p>
+                    <h3>HAPPY CLIENTS</h3>
+                </div>
+                <div class="atachment-card">
+                    <i class="fa-solid fa-award"></i>
+                    <p>800</p>
+                    <h3>PROJECTS</h3>
+                </div>
+                <div class="atachment-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <p>1232</p>
+                    <h3>LINES OF CODE</h3>
+                </div>
+                <div class="atachment-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <p>300</p>
+                    <h3>AWARDS WON</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Tabs -->
+
+
+   <!-- tab content -->
+<section class="tab-content">
+  <div class="container">
+    <div id="tab-1-content" class="tab-content-item show">
+      <div class="grid-2">
+        <div class="tab-content-grid">
+          
+              <div class="tab-content-star">
+                  <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="tab-content-support">
+                  <h3>DEDICATED SUPPORT & UPDATES</h3>
+                  <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus..</p>
+              </div>
+          
+          
+              <div class="tab-content-star">
+                  <i class="fa-solid fa-clipboard-check"></i>
+              </div>
+              <div class="tab-content-support">
+                  <h3>MULTIPURPOSE THEME</h3>
+                  <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus..</p>
+              </div>
+         
+          
+              <div class="tab-content-star">
+                  <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="tab-content-support">
+                  <h3>DESIGN WITH LOVES</h3>
+                  <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus..</p>
+              </div>
+      
+        </div>
+        <div class="tab-content-grid-image">
+          <img src="/assets/room-1.png" alt="room">
+        </div>
+      </div>
+  </div>
+    <!-- tab-2-content -->
+    <div id="tab-2-content" class="tab-content-item">
+      <div class="grid-3">
+        <div class="tab-content-1-box">
+            <div class="card">
+                <img src="/assets/c.png" alt="">
+                <div class="tab-content-1-body">
+                    <h2>OUR HISTORY</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content-1-box">
+            <div class="card">
+                <img src="/assets/c-1.png" alt="">
+                <div class="tab-content-1-body">
+                    <h2>WHAT WE DO</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content-1-box">
+            <div class="card">
+                <img src="/assets/c-2.png" alt="">
+                <div class="tab-content-1-body">
+                    <h2>OUR MISSION</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+   </div>
+    <!-- tab-3-content -->
+      <div id="tab-3-content" class="tab-content-item">
+        <div class="grid-3">
+          <div class="tab-content-1-box-item">
+              <div class="tab-content-grid">
+                  <div class="tab-flex">
+                      <div class="tab-content-support">
+                          <h3>MULTIPURPOSE & RESPONSIVE</h3>
+                          <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.</p>
+                      </div>
+                      <div class="tab-content-star">
+                          <i class="fa-solid fa-link"></i>
+                      </div>
+                      
+                  </div>
+                  <div class="tab-flex">
+                      <div class="tab-content-support">
+                          <h3>CREATIVE DESIGN</h3>
+                          <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.</p>
+                      </div>
+                      <div class="tab-content-star">
+                          <i class="fa-solid fa-trophy"></i>
+                      </div>
+                      
+                  </div>
+                  <div class="tab-flex">
+                      <div class="tab-content-support">
+                          <h3>AWESOME THEME</h3>
+                          <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.</p>
+                      </div>
+                      <div class="tab-content-star">
+                          <i class="fa-solid fa-tag"></i>
+                      </div>
+                      
+                  </div>
+                </div>
+          </div>
+          <div class="tab-content-2-box">
+              <div class="card">
+                  <img src="/assets/c.png" alt="">
+              
+              </div>
+          </div>
+          
+              <div class="tab-content-2-box tab-content-2-box-1">
+                  <div class="tab-flex">
+                      <div class="tab-content-star">
+                          <i class="fa-solid fa-eye-dropper"></i>
+                      </div>
+                      <div class="tab-content-support">
+                          <h3>STRATEGY SOLUTIONS</h3>
+                          <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.</p>
+                      </div>
+                  </div>
+                  <div class="tab-flex">
+                      <div class="tab-content-star">
+                          <i class="fa-solid fa-magnifying-glass-plus"></i>
+                      </div>
+                      <div class="tab-content-support">
+                          <h3>APP DEVELOPMENT</h3>
+                          <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.</p>
+                      </div>
+                  </div>
+                  <div class="tab-flex">
+                      <div class="tab-content-star">
+                          <i class="fa-solid fa-paper-plane"></i>
+                      </div>
+                      <div class="tab-content-support">
+                          <h3>HTML5 & CSS3</h3>
+                          <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+   
+
+<!-- tab-5-content -->
+    <div id="tab-5-content" class="tab-content-item">
+      <div class="grid-2">
+          <div class="tab-content-4-box">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.</p>
+              <ul class="list">
+                  <li>Font-Awesome Integration</li>
+                  <li>Multiple unique designs</li>
+                  <li>Clean coded, responsive and multipurpose</li>
+                  <li>Pages valid on w3c</li>
+                  <li>Well documented.</li>
+                  <li>Easy to customization.</li>
+              </ul>
+          </div>
+          <div class="tab-content-4-box-1">
+              <img src="/assets/laptob.png" alt="">
+          </div>
+      </div>
+    </div>
+  </div>
+</section> 
